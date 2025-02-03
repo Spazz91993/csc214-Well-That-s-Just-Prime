@@ -52,16 +52,15 @@ class FactorizerTest {
       assertEquals(expected, factorizer.primeFactors(24));
   }
   @Test
-  void itReturnsCorrectFactorsForNegative() {
+  void itReturnsAnEmptyListForNegative() {
       Factorizer factorizer = new Factorizer();
       assertEquals(new ArrayList<>(), factorizer.primeFactors(-2));
   }
-
   @Test
-  void itReturnsCorrectFactorsForPrimeNumber() {
+  void itReturnsCorrectFactorsForMAX() {
       Factorizer factorizer = new Factorizer();
       ArrayList<Integer> expected = new ArrayList<>();
-      expected.add(37);
-      assertEquals(expected, factorizer.primeFactors(37));
+      expected.add(2147483647);
+      assertEquals(expected, factorizer.primeFactors(Integer.MAX_VALUE));
   }
 }
